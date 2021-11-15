@@ -1,5 +1,5 @@
 FROM node:dubnium-alpine3.11
-WORKDIR /backend
+WORKDIR /backendsound
 COPY package*.json ./
 RUN npm install
 RUN npm install -g sequelize
