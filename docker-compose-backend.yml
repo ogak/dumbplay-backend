@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  backend:
+    image: ogak/backendsound:1.1
+    container_name: backend
+    ports:
+      - 5000:5000 
+  db:
+    image: mysql:5.7
+    container_name: dbsound
+    environment:
+      - MYSQL_ROOT_PASSWORD= Database123!
+      - MYSQL_DATABASE= dumbplay
+    ports:
+      - 3306:3306
+    volumes:
+      - /home/ogak/db-data/dbsound:/var/lib/mysql
